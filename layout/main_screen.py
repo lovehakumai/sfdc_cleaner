@@ -1,5 +1,5 @@
 from component import sidebar, routing
 
-def main_screen(session, DB_SCHEMA):
+def main_screen():
     sidebar()
-    routing(session, DB_SCHEMA)
+    routing()
