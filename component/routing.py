@@ -1,4 +1,7 @@
-from page import dashboard, initialize, customize, AI_chat
+from page.dashboard import dashboard
+from page.initialize import initialize
+from page.customize import customize
+from page.AI_chat import AI_chat
 import streamlit as st
 
 def routing():

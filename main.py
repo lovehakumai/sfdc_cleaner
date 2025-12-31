@@ -1,5 +1,6 @@
-from config import config
-from layout import main_screen, header
+from config.config import config
+from layout.main_screen import main_screen
+from layout.header import header
 
 def main():
     header()
