@@ -1,6 +1,6 @@
 from snowflake.snowpark.context import get_active_session
+import streamlit as st
 
 def config():
-    session = get_active_session()
-    DB_SCHEMA = "SFDC_CLEANER_DEV.RAW_DATA"
-    return session, DB_SCHEMA
+    st.session_state.session = get_active_session()
+    st.session_state.db_schema = "SFDC_CLEANER_DEV.RAW_DATA"

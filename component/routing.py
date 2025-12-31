@@ -3,10 +3,7 @@ import streamlit as st
 
 def routing(session, DB_SCHEMA):
 
-    if not st.session_state.current_page:
-        st.session_state.current_page = "📊 ダッシュボード"
-    else:
-        page = st.session_state.current_page
+    page = st.session_state.get("current_page", "📊 ダッシュボード")
 
     if page == "📊 ダッシュボード":
         dashboard(session, DB_SCHEMA)
