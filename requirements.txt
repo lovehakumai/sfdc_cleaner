@@ -1,4 +1,3 @@
-# Snowflake 側で確実にサポートされている主要ライブラリ
 snowflake-snowpark-python
 streamlit
 pandas
