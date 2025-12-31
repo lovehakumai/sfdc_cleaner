@@ -1,7 +1,6 @@
-from page import header, main_screen, config
+from config import config
 import streamlit as st
-
-current_page = st.session_state.current_page
+from layout import main_screen, header
 
 session, DB_SCHEMA = config.session, config.DB_SCHEMA
 
