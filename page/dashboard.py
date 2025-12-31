@@ -28,7 +28,7 @@ def dashboard():
     # オブジェクトごとの未対応件数をクエリで取得 (GROUP BY)
     object_counts = session.table(f"{DB_SCHEMA}.ANOMALY_LOGS") \
         .filter(col("IS_RESOLVED") == False) \
-        .group_by(col("TABLE_NAME")).agg(count("*").as_("count")) \
+        .group_by(col("TABLE_NAME")).agg(count("*").as_("COUNT")) \
         .to_pandas().set_index("TABLE_NAME")["COUNT"].to_dict()
 
     # タブ名に件数を動的に追加してリスト化
