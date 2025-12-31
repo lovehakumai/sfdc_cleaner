@@ -1,0 +1,20 @@
+# Python 3.12 互換性を重視した設定
+PyYAML>=6.0.1
+setuptools>=69.0.0
+wheel
+
+# Snowflake & Snowpark (3.12対応バージョン)
+snowflake-snowpark-python>=1.20.0
+snowflake-connector-python[pandas]>=3.10.0
+snowflake-cli-labs
+
+# UI & Data
+streamlit>=1.31.0
+watchdog
+pandas>=2.1.0
+faker
+
+# Integration
+simple-salesforce
+requests
+python-dotenv

@@ -1,0 +1,24 @@
+# --- Python 仮想環境 ---
+.venv/
+bin/
+include/
+lib/
+pyvenv.cfg
+
+# --- 機密情報 (絶対に公開しない) ---
+.env
+docker/.env
+env/.env
+
+# --- Python キャッシュ ---
+__pycache__/
+*.pyc
+
+# --- OS固有のファイル (Mac) ---
+.DS_Store
+
+# --- VS Code 設定 (共有したくない場合) ---
+.vscode/
+
+# --- Snowflake CLI 等のキャッシュ ---
+.snowflake/
