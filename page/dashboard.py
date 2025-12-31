@@ -1,7 +1,10 @@
 import streamlit as st
 from snowflake.snowpark.functions import col, count
 
-def dashboard(session, DB_SCHEMA):
+def dashboard():
+    session = st.session_state.session
+    DB_SCHEMA = st.session_state.db_schema
+    
     st.title("🛡️ Data Quality Hub: All-in-One Editor")
     st.markdown("Cortex AIとルールベースで検知された、修正が必要なアクティブな通知を管理します。")
     
