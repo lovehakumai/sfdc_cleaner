@@ -10,11 +10,11 @@ def routing():
     if page == "📊 ダッシュボード":
         dashboard()
 
-    elif page == "⚙️ 設定":
-        initialize( )
+    elif page == "🤖 AIと修正":
+        AI_chat()
 
     elif page == "🛡️ 検知のカスタム":
         customize()
 
-    elif page == "🤖 AIと修正":
-        AI_chat()
+    elif page == "⚙️ 設定":
+        initialize( )
