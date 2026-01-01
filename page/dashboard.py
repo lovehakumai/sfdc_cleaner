@@ -14,9 +14,13 @@ def dashboard():
     
     # KPI表示
     total_anomalies = log_table.filter(unresolved_filter).count()
-    m1, m2, m3 = st.columns(3)
+    rulebase_anomalies = log_table.filter(unresolved_filter & (col("DETECTION_METHOD") == "RULE_BASE")).count()
+    ai_anomalies = log_table.filter(unresolved_filter & (col("DETECTION_METHOD") == "AI_BASED")).count()
+    m1, m2, m3 = st.columns(3)      
     m1.metric("未対応総数", f"{total_anomalies}件")
-    # (m2, m3 は省略)
+    m2.metric("ルールベース検知", f"{rulebase_anomalies}件")
+    m3.metric("AI検知", f"{ai_anomalies}件")
+    
     st.divider()
 
     # タブ生成ロジック
