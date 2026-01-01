@@ -2,6 +2,7 @@ from page.dashboard import dashboard
 from page.initialize import initialize
 from page.customize import customize
 from page.AI_chat import AI_chat
+from page.manual_work import manual_work
 import streamlit as st
 
 def routing():
@@ -12,6 +13,9 @@ def routing():
 
     elif page == "🤖 AIと修正":
         AI_chat()
+
+    elif page == "✒️ マニュアル修正":
+        manual_work()
 
     elif page == "🛡️ 検知のカスタム":
         customize()
