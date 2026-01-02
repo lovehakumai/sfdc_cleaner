@@ -23,3 +23,7 @@ def manual_work():
                 st.error(f"実行中にエラーが発生しました: {e}")
     
     st.divider()
+    # --- 設定画面 ---
+    st.subheader("⚙️ 既存のルール")
+    create_manual_rule = st.button(" + マニュアルルールから作成")
+    create_business_rule = st.button(" + ビジネスルールから作成")
